@@ -6,6 +6,8 @@ const app = express();
 app.use(express.json());
 // routes
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+
 app.get("/", (req, res) => {
   res.send("Server running successfully");
 });
